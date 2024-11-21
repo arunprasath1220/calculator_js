@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: italic, sans-serif;
+    background-image: url("bg.img/doodle-math-objects-border-free-vector.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    }
+    .calculator {
+    border: 2px solid rgb(245, 238, 238);
+    border-radius: 15px;
+    padding: 7px;
+    box-shadow: 2px 2px 10px black;
+    background-color: rgb(244, 237, 237);
+    }
+    #display {
+    width: 95%;
+    height: 75px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    border: 2.5px solid rgb(42, 37, 37);
+    border-radius: 5px;
+    background-color: white;
+    }
+    button {
+    width: 65px;
+    height: 65px;
+    margin: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: skyblue;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    }
+    button:hover {
+    background-color: violet;
+    }
+    .red{
+    background-color: rgb(239, 71, 71);
+    font-weight: bolder;
+    }
+    .red:hover{
+    background-color: rgb(49, 44, 44);
+    color: rgb(239, 71, 71) ;
+    }
+    .green{
+    background-color: rgb(121, 238, 121);
+    }
+    .green:hover{
+    background-color: rgb(49, 44, 44);
+    color: rgb(121, 238, 121);
+    }
+    .clear{
+    color: rgb(239, 71, 71);
+    }
+        </style>
+    </head>
+    <body>
+        <div class="calculator">
+            <input type="text" id="display" disabledclass="red">
+            <div>
+            <button class="red" onclick="clearDisplay()">AC</button>
+            <button class="btn" onclick="appendToDisplay('(')">(</button>
+            <button class="btn" onclick="appendToDisplay(')')">)</button>
+            <button class="btn" onclick="appendToDisplay('/')">/</button>
+            </div>
+            <div>
+            <button class="btn" onclick="appendToDisplay('7')">7</button>
+            <button class="btn" onclick="appendToDisplay('8')">8</button>
+            <button class="btn" onclick="appendToDisplay('9')">9</button>
+            <button class="btn" onclick="appendToDisplay('*')">*</button>
+            </div>
+            <div>
+            <button class="btn" onclick="appendToDisplay('4')">4</button>
+            <button class="btn" onclick="appendToDisplay('5')">5</button>
+            <button class="btn" onclick="appendToDisplay('6')">6</button>
+            <button class="btn" onclick="appendToDisplay('-')">-</button>
+            </div>
+            <div>
+            <button class="btn" onclick="appendToDisplay('1')">1</button>
+            <button class="btn" onclick="appendToDisplay('2')">2</button>
+            <button class="btn" onclick="appendToDisplay('3')">3</button>
+            <button class="btn" onclick="appendToDisplay('+')">+</button>
+            </div>
+            <div>
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button class="btn" onclick="appendToDisplay('0')">0</button>
+            <button class="btn" onclick="appendToDisplay('.')">.</button>
+            <button class="green" onclick="calculateResult()">=</button>
+            </div>
+        </div>
+        <script src="cal.js"></script>
+    </body>
+</html>
